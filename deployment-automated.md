@@ -19,7 +19,7 @@ Once inside the instance, `deploy.sh` automates everything.
 
 | Type | Protocol | Port | Source |
 |------|----------|------|--------|
-| SSH | TCP | 22 | `0.0.0.0/0` |
+| SSH | TCP | 22 | `Your IP` |
 | HTTP | TCP | 80 | `0.0.0.0/0` |
 | HTTPS | TCP | 443 | `0.0.0.0/0` |
 
@@ -33,15 +33,13 @@ Once inside the instance, `deploy.sh` automates everything.
 
 - AWS Console → S3 → **Create bucket**
 
-- **Bucket name**: `portfolio-static-2024` (choose a globally unique name)
+- **Bucket name**: `your-bucket-name` (choose a globally unique name)
 
-- **AWS Region**: `eu-south-2` (Spain)
+- **AWS Region**: `your region`
 
 - **Object Ownership**: ACLs disabled (recommended)
 
 - **Block Public Access settings**: uncheck *Block all public access*
-
-- Check only *Block public access to buckets and objects granted through new public bucket or access point policies*
 
 - **Bucket Versioning**: Disable → **Create bucket**
 
@@ -49,15 +47,15 @@ Once inside the instance, `deploy.sh` automates everything.
 
 ```json
 {
-"Version": "2012-10-17",
-"Statement": [
-{
-"Effect": "Allow",
-"Principal": "*",
-"Action": "s3:GetObject",
-"Resource": "arn:aws:s3:::portfolio-static-2024/*"
-}
-]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::portfolio-static-2024/*"
+    }
+  ]
 }
 ```
 
@@ -84,7 +82,7 @@ scp -i /path/to/your-key.pem deploy.sh ubuntu@YOUR_ELASTIC_IP:/home/ubuntu/
 
 - Go to your domain registrar / DNS provider
 - **Delete** any existing AAAA record
-- **Create** two A records:
+- **Create** two A records (or 1 A record and 1 CN record):
 
 | Name | Value |
 |------|-------|
