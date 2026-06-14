@@ -12,7 +12,7 @@ Covers: EC2, S3, Gunicorn, Nginx, DNS, Let's Encrypt HTTPS. Each command is prov
 
 ## Automated deployment
 
-[`deployment-automated.md`](./deployment-automated.md) — Uses the [`deploy.sh`](../deploy.sh) script to automate all steps inside the EC2 instance.
+[`deployment-automated.md`](./deployment-automated.md) — Uses the [`deploy.sh`](./deploy.sh) script to automate all steps inside the EC2 instance.
 
 Only the external prerequisites (launching the instance, creating the S3 bucket, configuring DNS) are done manually. Once you SSH in, one command does the rest.
 
