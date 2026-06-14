@@ -147,9 +147,8 @@ sudo ln -s /etc/nginx/sites-available/portfolio /etc/nginx/sites-enabled
 sudo rm -f /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo systemctl restart nginx
-curl -I http://midominio.com
-curl -I http://psotorrio.click
-curl -I http://www.psotorrio.click
+curl -I http://"${FIRST_HOST}"
+curl -I http://"${SECOND_HOST}"
 
 sudo ufw allow 22/tcp
 sudo ufw allow 80/tcp
