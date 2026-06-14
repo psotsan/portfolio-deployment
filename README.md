@@ -3,6 +3,7 @@
 Website deployed to https://www.psotorrio.click
 
 This directory contains the deployment documentation for the Portfolio Django application on AWS EC2 (Ubuntu 26.04, t3.micro).
+
 Portfolio app repository: https://github.com/psotsan/portfolio
 
 Choose the method that best suits your needs:
