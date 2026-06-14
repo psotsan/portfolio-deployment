@@ -6,13 +6,13 @@ Choose the method that best suits your needs:
 
 ## Manual deployment
 
-[`deploy.en.md`](./deploy.en.md) — Step-by-step guide to deploy by hand.
+[`deployment-manual.md`](./deployment-manual.md) — Step-by-step guide to deploy by hand.
 
 Covers: EC2, S3, Gunicorn, Nginx, DNS, Let's Encrypt HTTPS. Each command is provided so you can follow along and understand every piece of the stack.
 
 ## Automated deployment
 
-[`deploy-automated.en.md`](./deploy-automated.en.md) — Uses the [`deploy.sh`](../deploy.sh) script to automate all steps inside the EC2 instance.
+[`deployment-automated.md`](./deployment-automated.md) — Uses the [`deploy.sh`](../deploy.sh) script to automate all steps inside the EC2 instance.
 
 Only the external prerequisites (launching the instance, creating the S3 bucket, configuring DNS) are done manually. Once you SSH in, one command does the rest.
 
