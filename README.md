@@ -20,7 +20,13 @@ Covers: EC2, S3, Gunicorn, Nginx, DNS, Let's Encrypt HTTPS. Each command is prov
 
 Only the external prerequisites (launching the instance, creating the S3 bucket, configuring DNS) are done manually. Once you SSH in, one command does the rest.
 
-## Prerequisites (both methods)
+## Docker deployment
+
+[`deployment-docker-ec2.md`](./deployment-docker-ec2.md) — Containerized deployment using Docker on EC2.
+
+Covers: Docker, nginx reverse proxy, Let's Encrypt HTTPS, UFW firewall, GHCR image registry, and IAM roles for S3 access. All services run in an isolated container with automated deployment scripts.
+
+## Prerequisites (all methods)
 
 - An AWS account
 - Two domain names
